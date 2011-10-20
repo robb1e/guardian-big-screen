@@ -1,0 +1,41 @@
+body {
+    padding-top: 60px;
+}
+body, html {
+    background-color: #004a83; 
+    color: #fff;
+    font-family: "Helvetica Neue", "Helvetica", "Arial";
+}
+h1 {
+    font-family: "Merriweather";
+    font-weight: 500;
+    padding: 5px;
+    margin: 10px;
+    font-size: 18px;
+    min-height: 50px;
+    color:#fff;
+    line-height:110% !important;
+}
+h2 {
+    font-family: "Merriweather";
+    font-weight: 300;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 150%;
+}
+.brand{
+    font-family: "Merriweather";
+    font-weight: 300;
+    padding: 0px !important;
+    margin: 10px;
+    font-size: 15px;
+    color: #fff;    
+}
+.hero-unit, .fill {
+    background-color: #649ABB !important;
+}
+a:link {
+    color: #fff;
+}
