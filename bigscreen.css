@@ -8,13 +8,11 @@ body, html {
 }
 h1 {
     font-family: "Merriweather";
-    font-weight: 500;
-    padding: 5px;
-    margin: 10px;
-    font-size: 18px;
-    min-height: 50px;
-    color:#fff;
-    line-height:110% !important;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+   // line-height: 30%;
+   // line-height: 10%;
 }
 h2 {
     font-family: "Merriweather";
@@ -33,8 +31,78 @@ h2 {
     font-size: 15px;
     color: #fff;    
 }
+.hero-unit {
+padding-top:50px;
+padding-bottom:35px;
+padding-right: 20px;
+padding-left:25px;
+}
+
 .hero-unit, .fill {
     background-color: #649ABB !important;
+   
+    
+}
+.hero-unit {
+min-height: 330px;
+max-height: 330px;
+}
+.hero-unit img{
+border-radius: 10px;
+max-width: 366px;
+}
+
+.span6 img{
+min-width: 250px;
+max-width: 250px;
+border-radius: 10px;
+}
+.span5 img{
+min-width: 250px;
+max-width: 250px;
+border-radius: 10px;
+}
+.header_height {
+min-height: 70px;
+max-height: 70px;
+}
+
+.text_height {
+padding-top: 10px;
+min-height: 130px;
+max-height: 130px;
+}
+.content {
+float: right;
+max-width: 56%;
+min-width: 56%;
+margin-left:20px;
+margin-right: 10px;
+padding-top: 0px;
+}
+
+.sidebar {
+max-width: 40%;
+min-width: 40%;
+float: left;
+}
+
+.sidebar img {
+align: middle;
+}
+
+.mycontainer {
+margin-top:0px;
+margin-bottom:0px;
+margin-right:0px;
+margin-left:0px;
+}
+p {
+text-align: justify;
+}
+
+img {
+
 }
 a:link {
     color: #fff;
