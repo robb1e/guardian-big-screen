@@ -21,7 +21,7 @@ gu.bs = {
                 next = true;
             }
         });
-        return 'http://content.guardianapis.com/search?format=json&show-fields=standfirst&show-media=picture&section=' + gu.bs.currentSection;
+        return 'http://content.guardianapis.com/search?format=json&show-fields=standfirst&section=' + gu.bs.currentSection;
     },
     
      retrieve: function(){
@@ -40,12 +40,7 @@ gu.bs = {
                 if (index < 4) {
                     $('h1[data-gu-bigscreen=' + index + ']').html(value.webTitle);
                     $('h2[data-gu-bigscreen=' + index + ']').html(value.webTitle);
-                  if (value.mediaAssets.length>0)  {
-                     // $('span[data-gu-bigscreen=' + index + ']').html(value.mediaAssets[0].file);
-                      $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[0].file);
-                    }
-                  else {$('img[data-gu-bigscreen=' + index + ']').attr("src", 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/8/1312810126887/gu_192x115.jpg');} 
-                   $('p[data-gu-bigscreen=' + index + ']').html(value.fields.standfirst);
+                    $('p[data-gu-bigscreen=' + index + ']').html(value.fields.standfirst);
                 }
             });
         });
@@ -60,9 +55,10 @@ gu.bs = {
                 if (index < 4) {
                     $('h1[data-gu-bigscreen=' + index + ']').html(value.webTitle);
                     $('h2[data-gu-bigscreen=' + index + ']').html(value.webTitle);
-                  var array_size= value.mediaAssets.length;                 
-                     switch (array_size)
-                     {
+                    var array_size = 0;
+                    if (value.mediaAssets !== undefined)
+                        array_size= value.mediaAssets.length;
+                    switch (array_size) {
                         case 1: $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[0].file);
                           break;
                         case 2:
@@ -74,17 +70,17 @@ gu.bs = {
                         case 4:
                           $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[3].file);
                           break;
-                          case 5:
+                        case 5:
                           $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[4].file);
                           break;
-                           case 6:
+                        case 6:
                           $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[5].file);
                           break;
-                          case 7:
+                        case 7:
                           $('img[data-gu-bigscreen=' + index + ']').attr("src",value.mediaAssets[6].file);
                           break;
-
-                        default: $('img[data-gu-bigscreen=' + index + ']').attr("src", 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/8/1312810126887/gu_192x115.jpg');}
+                        default: $('img[data-gu-bigscreen=' + index + ']').attr("src", 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/8/1312810126887/gu_192x115.jpg');
+                    }
                    $('p[data-gu-bigscreen=' + index + ']').html(value.fields.standfirst);
                 }
             });
